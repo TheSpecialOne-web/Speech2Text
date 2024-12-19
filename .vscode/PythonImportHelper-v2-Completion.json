@@ -1,0 +1,420 @@
+[
+    {
+        "label": "tkinter",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "tkinter",
+        "description": "tkinter",
+        "detail": "tkinter",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageTk",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "ImageSequence",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "torch",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "torch",
+        "description": "torch",
+        "detail": "torch",
+        "documentation": {}
+    },
+    {
+        "label": "PySimpleGUI",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "PySimpleGUI",
+        "description": "PySimpleGUI",
+        "detail": "PySimpleGUI",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "ffmpeg",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ffmpeg",
+        "description": "ffmpeg",
+        "detail": "ffmpeg",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "chardet",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "chardet",
+        "description": "chardet",
+        "detail": "chardet",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "openai",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "openai",
+        "description": "openai",
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "requests",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "requests",
+        "description": "requests",
+        "detail": "requests",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "AnimatedGIF",
+        "kind": 6,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "class AnimatedGIF(tk.Label):\n    def __init__(self, master, path, *args, **kwargs):\n        tk.Label.__init__(self, master, *args, **kwargs)\n        self.sequence = [ImageTk.PhotoImage(img) for img in ImageSequence.Iterator(Image.open(path))]\n        self.image_pointer = 0\n        # 最初に表示される画像の参照を保持する\n        self.current_image = self.sequence[0]\n        self.configure(image=self.current_image)\n        self.after(1000, self.animate)\n        self.after(1000, self.check_for_termination)  # 追加",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "root = tk.Tk()\nroot.title('処理中です。お待ちください...')\n# ウィンドウサイズを設定\nwindow_width = 330\nwindow_height = 65\n# スクリーンサイズを取得\nscreen_width = root.winfo_screenwidth()\nscreen_height = root.winfo_screenheight()\n# 画面中央からのずらし量を設定\noffset_right = 210  # 右に移動する距離",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "window_width",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "window_width = 330\nwindow_height = 65\n# スクリーンサイズを取得\nscreen_width = root.winfo_screenwidth()\nscreen_height = root.winfo_screenheight()\n# 画面中央からのずらし量を設定\noffset_right = 210  # 右に移動する距離\noffset_top = -185 # 上に移動する距離\n# ウィンドウを画面中央に配置するための座標を計算\n#position_top = int(screen_height / 2 - window_height / 2)",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "window_height",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "window_height = 65\n# スクリーンサイズを取得\nscreen_width = root.winfo_screenwidth()\nscreen_height = root.winfo_screenheight()\n# 画面中央からのずらし量を設定\noffset_right = 210  # 右に移動する距離\noffset_top = -185 # 上に移動する距離\n# ウィンドウを画面中央に配置するための座標を計算\n#position_top = int(screen_height / 2 - window_height / 2)\n#position_right = int(screen_width / 2 - window_width / 2)",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "screen_width",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "screen_width = root.winfo_screenwidth()\nscreen_height = root.winfo_screenheight()\n# 画面中央からのずらし量を設定\noffset_right = 210  # 右に移動する距離\noffset_top = -185 # 上に移動する距離\n# ウィンドウを画面中央に配置するための座標を計算\n#position_top = int(screen_height / 2 - window_height / 2)\n#position_right = int(screen_width / 2 - window_width / 2)\n# ウィンドウを画面中央から少し右上に配置するための座標を計算\nposition_top = int(screen_height / 2 - window_height / 2 + offset_top)",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "screen_height",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "screen_height = root.winfo_screenheight()\n# 画面中央からのずらし量を設定\noffset_right = 210  # 右に移動する距離\noffset_top = -185 # 上に移動する距離\n# ウィンドウを画面中央に配置するための座標を計算\n#position_top = int(screen_height / 2 - window_height / 2)\n#position_right = int(screen_width / 2 - window_width / 2)\n# ウィンドウを画面中央から少し右上に配置するための座標を計算\nposition_top = int(screen_height / 2 - window_height / 2 + offset_top)\nposition_right = int(screen_width / 2 - window_width / 2 + offset_right)",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "offset_right",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "offset_right = 210  # 右に移動する距離\noffset_top = -185 # 上に移動する距離\n# ウィンドウを画面中央に配置するための座標を計算\n#position_top = int(screen_height / 2 - window_height / 2)\n#position_right = int(screen_width / 2 - window_width / 2)\n# ウィンドウを画面中央から少し右上に配置するための座標を計算\nposition_top = int(screen_height / 2 - window_height / 2 + offset_top)\nposition_right = int(screen_width / 2 - window_width / 2 + offset_right)\n# ウィンドウサイズと位置を設定\nroot.geometry(f\"{window_width}x{window_height}+{position_right}+{position_top}\")",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "offset_top",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "offset_top = -185 # 上に移動する距離\n# ウィンドウを画面中央に配置するための座標を計算\n#position_top = int(screen_height / 2 - window_height / 2)\n#position_right = int(screen_width / 2 - window_width / 2)\n# ウィンドウを画面中央から少し右上に配置するための座標を計算\nposition_top = int(screen_height / 2 - window_height / 2 + offset_top)\nposition_right = int(screen_width / 2 - window_width / 2 + offset_right)\n# ウィンドウサイズと位置を設定\nroot.geometry(f\"{window_width}x{window_height}+{position_right}+{position_top}\")\nlabel = AnimatedGIF(root, \"C:/tool/mojiokosi/sozai_cman_jp_20230716084851.gif\")",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "#position_top",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "#position_top = int(screen_height / 2 - window_height / 2)\n#position_right = int(screen_width / 2 - window_width / 2)\n# ウィンドウを画面中央から少し右上に配置するための座標を計算\nposition_top = int(screen_height / 2 - window_height / 2 + offset_top)\nposition_right = int(screen_width / 2 - window_width / 2 + offset_right)\n# ウィンドウサイズと位置を設定\nroot.geometry(f\"{window_width}x{window_height}+{position_right}+{position_top}\")\nlabel = AnimatedGIF(root, \"C:/tool/mojiokosi/sozai_cman_jp_20230716084851.gif\")\nlabel.pack()\nroot.mainloop()",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "#position_right",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "#position_right = int(screen_width / 2 - window_width / 2)\n# ウィンドウを画面中央から少し右上に配置するための座標を計算\nposition_top = int(screen_height / 2 - window_height / 2 + offset_top)\nposition_right = int(screen_width / 2 - window_width / 2 + offset_right)\n# ウィンドウサイズと位置を設定\nroot.geometry(f\"{window_width}x{window_height}+{position_right}+{position_top}\")\nlabel = AnimatedGIF(root, \"C:/tool/mojiokosi/sozai_cman_jp_20230716084851.gif\")\nlabel.pack()\nroot.mainloop()",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "position_top",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "position_top = int(screen_height / 2 - window_height / 2 + offset_top)\nposition_right = int(screen_width / 2 - window_width / 2 + offset_right)\n# ウィンドウサイズと位置を設定\nroot.geometry(f\"{window_width}x{window_height}+{position_right}+{position_top}\")\nlabel = AnimatedGIF(root, \"C:/tool/mojiokosi/sozai_cman_jp_20230716084851.gif\")\nlabel.pack()\nroot.mainloop()",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "position_right",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "position_right = int(screen_width / 2 - window_width / 2 + offset_right)\n# ウィンドウサイズと位置を設定\nroot.geometry(f\"{window_width}x{window_height}+{position_right}+{position_top}\")\nlabel = AnimatedGIF(root, \"C:/tool/mojiokosi/sozai_cman_jp_20230716084851.gif\")\nlabel.pack()\nroot.mainloop()",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "label",
+        "kind": 5,
+        "importPath": "gif_program.gif_program",
+        "description": "gif_program.gif_program",
+        "peekOfCode": "label = AnimatedGIF(root, \"C:/tool/mojiokosi/sozai_cman_jp_20230716084851.gif\")\nlabel.pack()\nroot.mainloop()",
+        "detail": "gif_program.gif_program",
+        "documentation": {}
+    },
+    {
+        "label": "transcribe",
+        "kind": 2,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "def transcribe(input_path, output_path, use_gpu):\n    # whisper large-v3を取得\n    logging.info('transcribe_start')\n    from faster_whisper import WhisperModel\n    # 画面で選択されたモデルの読み込みを行う\n    # GPUを使用するかどうかでmodelの設定を切り替える\n    #sg.Print('use_gpu',use_gpu)\n    if use_gpu:\n        logging.info('transcribe_gpu_select')\n        if selected_process == '文字起こし（精度優先）':",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "correct_text",
+        "kind": 2,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "def correct_text(input_path, output_path, retries=3):\n    logging.info('correct_text start_point')\n    # <<<<< Fastapiにリクエストして、OpenAIのAPIKEYを取得する関数 >>>>>\n    api_url = \"https://fastapi-keyget-4cdd2eb0f921.herokuapp.com/verify-authentication-key\"   # HerokuのURL\n    authentication_key = os.getenv(\"Authentication_key\")\n    response = requests.post(api_url, json={\"client_key\": authentication_key})\n    if response.status_code == 200:\n        openai.api_key = response.json()[\"decrypted_api_key\"]\n    else:\n        sg.popup(\"APIKEY取得の認証に失敗しました。\",",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "summarize",
+        "kind": 2,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "def summarize(input_path, output_path, retries=3):\n    logging.info('summarize start_point')\n    # <<<<< Fastapiにリクエストして、OpenAIのAPIKEYを取得する関数 >>>>>\n    api_url = \"https://fastapi-keyget-4cdd2eb0f921.herokuapp.com/verify-authentication-key\"   # HerokuのURL\n    authentication_key = os.getenv(\"Authentication_key\")\n    response = requests.post(api_url, json={\"client_key\": authentication_key})\n    if response.status_code == 200:\n        openai.api_key = response.json()[\"decrypted_api_key\"]\n    else:\n        sg.popup(\"APIKEY取得の認証に失敗しました。\", ",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "punctuate",
+        "kind": 2,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "def punctuate(input_path, output_path, retries=3):          #パンクチュエート\n    logging.info('punctuate start_point')\n    # <<<<< Fastapiにリクエストして、OpenAIのAPIKEYを取得する関数 >>>>>\n    api_url = \"https://fastapi-keyget-4cdd2eb0f921.herokuapp.com/verify-authentication-key\"   # HerokuのURL\n    authentication_key = os.getenv(\"Authentication_key\")\n    response = requests.post(api_url, json={\"client_key\": authentication_key})\n    if response.status_code == 200:\n        openai.api_key = response.json()[\"decrypted_api_key\"]\n    else:\n        sg.popup(\"APIKEY取得の認証に失敗しました。\", ",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "check_input_extension",
+        "kind": 2,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "def check_input_extension(input_path, allowed_extensions):\n    ext = Path(input_path).suffix.lower()\n    if ext not in allowed_extensions:\n        sg.popup(f\"入力ファイルに指定されたファイルの拡張子は処理対象外です。処理対象の拡張子：{', '.join(allowed_extensions)} です。\", \n                   title=\"エラーメッセージ\")\n        return False\n    return True\n####################################\n###  出力ファイルの拡張子チェック   ###\n####################################",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "check_output_extension",
+        "kind": 2,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "def check_output_extension(output_path, allowed_extension):\n    ext = Path(output_path).suffix.lower()\n    if ext != allowed_extension:\n        sg.popup(f\"出力ファイルに指定されたファイルの拡張子は処理対象外です。処理対象の拡張子：{allowed_extension} です。\", \n                   title=\"エラーメッセージ\")\n        return False\n    return True\n####################################\n###  ファイルのエンコード取得　　   ###\n####################################",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "detect_encoding",
+        "kind": 2,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "def detect_encoding(file_path):   #エンコード\n    with open(file_path, 'rb') as f:\n        result = chardet.detect(f.read())\n    return result['encoding']\n############################\n###  特定文字列変換処理　  ###\n############################\ndef replace_text(input_path):\n    # 置き換えたい文字列が格納されたExcelファイルを開く\n    df = pd.read_excel('C:\\\\tool\\\\mojiokosi\\\\moji_replace.xlsx')",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "replace_text",
+        "kind": 2,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "def replace_text(input_path):\n    # 置き換えたい文字列が格納されたExcelファイルを開く\n    df = pd.read_excel('C:\\\\tool\\\\mojiokosi\\\\moji_replace.xlsx')\n    # 入力されたファイルの内容を読み込む\n    with open(input_path, 'r', encoding=detect_encoding(input_path)) as f:\n        text = f.read()\n    # Excelファイルの内容に従って文字列を置き換える\n    for index, row in df.iterrows():\n        text = text.replace(row['変換対象文字列'], row['変換後文字列'])\n    # 置き換えた後の文字列を一時ファイルとして保存",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "start_subprocess",
+        "kind": 2,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "def start_subprocess():\n    # サブプロセス(GIFプログラム)終了指示ファイルが存在する場合、削除しておく\n    terminate_file_path = 'C:/tool/mojiokosi/terminate.txt'\n    if os.path.exists(terminate_file_path):\n        os.remove(terminate_file_path)\n    # サブプロセス(GIFプログラム)の起動\n    #**** $$$注意 ****** pyinstallerでexeファイル化する時は下記１をコメントにして、下記２のコメントを外す **********\n    # p = subprocess.Popen(\n    #    [\"C:/py/VSCODE/VSSRC/venv_tool1/Scripts/python.exe\", \n    #     \"C:/py/VSCODE/VSSRC/venv_tool1/user_scripts/gif_program.py\"])     #←１ DAIV4NPC",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "terminate_subprocess",
+        "kind": 2,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "def terminate_subprocess(p, terminate_file_path):\n    # サブプロセス(GIFプログラム)の停止\n    p.terminate()\n    # サブプロセスの停止処理(p.terminate)が空振りした時の対応\n    # メインプロセスが終了したことを示すために、終了指示ファイルを作成する\n    with open(terminate_file_path, 'w') as f:\n        f.write('terminate')\n#------------------------------【メインコントロール】---- @@@@ -----------------------------------------------------------------------\n# GUI レイアウトの定義\nsg.theme('LightBlue1')  # テーマを設定        #  BlueMono LightBlue1 LightBlue2 LightBlue3 ",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "log_file",
+        "kind": 5,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "log_file = 'C:/tool/mojiokosi/app.log'\nif os.path.exists(log_file):\n    open(log_file, 'w',encoding='utf-8').close()\n# ロギングの設定\nlogging.basicConfig(\n    filename='C:/tool/mojiokosi/app.log',               # ログを出力するファイル名\n    level=logging.INFO,                                 # ログレベルはINFO以上\n    format='%(asctime)s %(levelname)s :%(message)s',    # '日時 ログレベル :メッセージ' の形式で出力\n    datefmt='%Y/%m/%d %H:%M:%S',                        # 日時の表示形式を指定\n)",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "layout",
+        "kind": 5,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "layout = [\n    [\n        sg.Column([\n            [sg.Text('１．処理選択 （以下のいずれかの処理を選択して下さい）', text_color='black')],\n            [sg.Text('    ', text_color='black'),sg.Listbox(values=('文字起こし（精度優先）','文字起こし（スピード優先）', '文章校正', '文章要約', '文章句読点付与'), size=(40, 4), key='-PROC-')],\n            [sg.Text('    ', text_color='black'),sg.Text('文字起こしの場合は、CPUかGPUのどちらかを選択して下さい', text_color='black')],\n            [sg.Text('    ', text_color='black'),sg.Radio('CPU使用', \"RADIO1\", default=True, key='-CPU-'), sg.Radio('GPU使用', \"RADIO1\", default=False, key='-GPU-')],\n            [sg.Text('２．入力ファイル選択', text_color='black')],\n            [sg.Text('    ', text_color='black'),sg.In(size=(80, 1), key='-IN-TEXT-'), sg.FileBrowse('ファイル選択', key='-IN-')],\n            [sg.Text('３．出力結果の出力先選択', text_color='black')],",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "icon_path",
+        "kind": 5,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "icon_path = \"C:/tool/mojiokosi/favicon.ico\"     # アイコンファイルへのパス\nwindow = sg.Window('文字起こし / 文章校正 / 文章要約 スクリプト', layout,icon=icon_path)\n#window = sg.Window('文字起こし / 文章校正 / 文章要約 スクリプト', layout)\noutput_file_dict = {\n    '文字起こし': '',\n    '文章校正': '',\n    '文章要約': '',\n    '文章句読点付与': '',\n}\ntry:",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "window = sg.Window('文字起こし / 文章校正 / 文章要約 スクリプト', layout,icon=icon_path)\n#window = sg.Window('文字起こし / 文章校正 / 文章要約 スクリプト', layout)\noutput_file_dict = {\n    '文字起こし': '',\n    '文章校正': '',\n    '文章要約': '',\n    '文章句読点付与': '',\n}\ntry:\n    while True:",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "#window",
+        "kind": 5,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "#window = sg.Window('文字起こし / 文章校正 / 文章要約 スクリプト', layout)\noutput_file_dict = {\n    '文字起こし': '',\n    '文章校正': '',\n    '文章要約': '',\n    '文章句読点付与': '',\n}\ntry:\n    while True:\n        event, values = window.read()",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    },
+    {
+        "label": "output_file_dict",
+        "kind": 5,
+        "importPath": "mojiokosi_gpt.mojiokosi_gpt",
+        "description": "mojiokosi_gpt.mojiokosi_gpt",
+        "peekOfCode": "output_file_dict = {\n    '文字起こし': '',\n    '文章校正': '',\n    '文章要約': '',\n    '文章句読点付与': '',\n}\ntry:\n    while True:\n        event, values = window.read()\n        if event in (sg.WINDOW_CLOSED, '終了'):",
+        "detail": "mojiokosi_gpt.mojiokosi_gpt",
+        "documentation": {}
+    }
+]
